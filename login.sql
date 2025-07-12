@@ -66,6 +66,30 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (4, 'Ankita', 'ankita@gmail.com', '$2y$10$ZuWPf98dGPFogVM8MoKGxOVZ4v1mXD.WrJQ7rwfvdYLWMpyEyRhtK'),
 (5, 'Keerti Panwar', 'keerti1234@gmail.com', '$2y$10$PL6oQH71xCh3F3BALBuVYu6SLn2AVQ41o.i5vi2LosRIWEh1H.0Zi');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produits`
+--
+
+CREATE TABLE `produits` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nom` VARCHAR(255) NOT NULL,
+  `description` TEXT NOT NULL,
+  `prix` DECIMAL(10,2) NOT NULL,
+  `image` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `produits`
+--
+
+INSERT INTO `produits` (`nom`, `description`, `prix`, `image`) VALUES
+('Produit 1', 'Description du produit 1', 99.99, 'produit1.jpg'),
+('Produit 2', 'Description du produit 2', 49.99, 'produit2.jpg'),
+('Produit 3', 'Description du produit 3', 19.99, 'produit3.jpg');
+
 --
 -- Indexes for dumped tables
 --
@@ -83,6 +107,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `produits`
+--
+ALTER TABLE `produits`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -97,6 +127,12 @@ ALTER TABLE `contact`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `produits`
+--
+ALTER TABLE `produits`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

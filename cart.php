@@ -41,13 +41,13 @@ session_start();
                         </form>
                     </tr>
                     <?php
-                        $qty = isset($item['quantity']) ? $item['quantity'] : 1;
+                        $qty = isset($item['quantity']) ? $item['quantity'] : 5;
                         $total += $item['price'] * $qty;
                     ?>
                 <?php endforeach; ?>
                 <tr>
                     <td colspan="2" class="text-end"><strong>Total :</strong></td>
-                    <td><strong><?= number_format($total, 2) ?> </strong></td>
+                    <td><strong><?= number_format($total, 3) ?> </strong></td>
                 </tr>
             </tbody>
         </table>

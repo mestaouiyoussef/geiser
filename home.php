@@ -251,7 +251,6 @@ if (!isset($_SESSION['cart'])) {
                 </div>
             </div>
             <div class="row project">
-
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
                         <img src="images/project1.jpg" class="card-img-top" alt="...">
@@ -260,10 +259,7 @@ if (!isset($_SESSION['cart'])) {
                                 <h4 class="card-title">SaaS Website</h4>
                                 <p class="card-text">Development. Jan 19,2022</p>
                                <form method="post" action="add_to_cart.php">
-    <input type="hidden" name="product_name" value="SaaS Website">
-    <input type="hidden" name="price" value="99">
-    <button type="submit" class="btn btn-primary">Ajouter au panier</button>
-</form>
+                                <button><a href="project1.html">Voir projet</a></button>
                             </div>
                         </div>
                     </div>
@@ -276,7 +272,7 @@ if (!isset($_SESSION['cart'])) {
                             <div class="text">
                                 <h4 class="card-title">Travel Website</h4>
                                 <p class="card-text">UI/UX Jun 29,2023</p>
-                                <button>see project</button>
+                                <button><a href="project1.html">Voir projet</a></button>
                             </div>
                         </div>
                     </div>
@@ -290,7 +286,7 @@ if (!isset($_SESSION['cart'])) {
                             <div class="text">
                                 <h4 class="card-title">Travel Website</h4>
                                 <p class="card-text">UI/UX Aug 9,2021</p>
-                                <button>see project</button>
+                                 <button><a href="project1.html">Voir projet</a></button>
                             </div>
                         </div>
                     </div>
@@ -303,13 +299,26 @@ if (!isset($_SESSION['cart'])) {
                             <div class="text">
                                 <h4 class="card-title">SaaS Website</h4>
                                 <p class="card-text">Development. May 25 ,2022</p>
-                                <button>see project</button>
+                                <button><a href="project1.html">Voir projet</a></button>
+
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
+                    </div> <!-- fin .row.project -->
+
+        <div class="text-end mt-4">
+    <form action="produit.php" method="get">
+        <button type="submit" class="voir-tous-btn">Voir tous les produits</button>
+    </form>
+</div>
+
+
+    </div> <!-- fin .container -->
+</section>
+
 
         </div>
     </section>

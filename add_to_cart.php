@@ -6,28 +6,34 @@ if (!isset($_SESSION['cart'])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $product_name = $_POST['product_name'];
-    $price = $_POST['price'];
+    $product_id = $_POST['product_id'] ?? null;
+    $product_name = $_POST['product_name'] ?? null;
+    $price = $_POST['price'] ?? null;
 
-    // Vérifie si le produit est déjà dans le panier
-    $found = false;
-    foreach ($_SESSION['cart'] as &$item) {
-        if ($item['product'] == $product_name) {
-            $item['quantity'] += 1;
-            $found = true;
-            break;
+    if ($product_name && $price) {
+        $found = false;
+
+        // On cherche dans le panier un produit avec le même nom
+        foreach ($_SESSION['cart'] as &$item) {
+            if ($item['product'] === $product_name) {
+                $item['quantity'] += 1; // Incrémente la quantité
+                $found = true;
+                break;
+            }
+        }
+
+        // Si pas trouvé, on ajoute un nouveau produit
+        if (!$found) {
+            $_SESSION['cart'][] = [
+                'id' => $product_id,
+                'product' => $product_name,
+                'price' => (float)$price,
+                'quantity' => 1
+            ];
         }
     }
 
-    if (!$found) {
-        $_SESSION['cart'][] = [
-            'product' => $product_name,
-            'price' => $price,
-            'quantity' => 1
-        ];
-    }
+    header("Location: produits.php?added=1");
+exit;
 
-    header("Location: home.php");
-    exit;
 }
-

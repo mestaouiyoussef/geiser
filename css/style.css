@@ -386,6 +386,119 @@
     color: #2B547E;
 }
 
+/* project section  project home */
+.project-section {
+    background-color: #088F8F;
+    padding: 90px;
+    /* height: 100vh; */
+}
+
+.project-section .text h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #FFA500;
+    font-weight: 600;
+}
+
+.project-section .text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: orange;
+    text-transform: capitalize;
+}
+
+.project-section hr {
+    height: 2px;
+    background-color: #0f92a3;
+    border: none;
+}
+
+.project-section .text p {
+    font-size: 18px;
+    color: #d1d1d1;
+}
+
+.project-section .projects .card {
+    height: 400px;
+    margin-top: 40px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 30px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+
+}
+
+.project-section .project .card:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+
+.project-section .projects .card h4 {
+    font-size: 20px;
+    color: #1c456d;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.project-section .projects .card p {
+    font-size: 15px;
+    color: #555;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.project-section .project .card button {
+    margin-top: 10px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    height: 40px;
+    width: 150px;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-section .project .card button:hover {
+    background-color: #fff;
+    border: 2px solid #088F8F;
+    color: #088F8F;
+}
+
+
+.project-section .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.voir-tous-btn {
+    border-radius: 30px;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    height: 40px;
+    width: 180px;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.voir-tous-btn:hover {
+    background-color: #fff;
+    border: 2px solid #088F8F;
+    color: #088F8F;
+}
+
+
+
 /*produit section  */
 
 .produit-section {
@@ -429,6 +542,7 @@
     padding: 10px;
     margin-bottom: 10px;
 }
+
 
 .produit-section .produit .card:hover {
     transform: scale(1.2);
