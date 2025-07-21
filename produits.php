@@ -158,78 +158,6 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
     }, 4000); // 4000 millisecondes = 4 secondes
 </script>
 
-
-
-
-    <!-- services section  -->
-
-    <section class="services-section" id="services">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-12 col-sm-12 services">
-
-                    <div class="row row1">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card">
-                                <img src="images/research.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h4 class="card-title">Research</h4>
-                                    <p class="card-text">We build effective strategies to help you reach customers
-                                        and
-                                        prospects
-                                        across the entire.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card">
-                                <img src="images/brand.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h4 class="card-title">Branding</h4>
-                                    <p class="card-text">Brand identity represents the visual elements and assets
-                                        that
-                                        distinguish a brand.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row row2">
-
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card">
-                                <img src="images/ux.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h4 class="card-title">UI/UX Design</h4>
-                                    <p class="card-text">UI/UX design services focus on creating intuitive &
-                                        user-centric
-                                        interfaces for digital products.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card">
-                                <img src="images/app-development.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h4 class="card-title">Development</h4>
-                                    <p class="card-text">A concept is brought to life through the services various
-                                        stages, such
-                                        as planning, testing and deployment.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- project section  -->
 
     <section class="project-section" id="projects">
@@ -255,7 +183,7 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
                         <h4 class="card-title">SaaS Website</h4>
                         <p class="card-text">Development · Jan 19, 2022</p>
                         <form class="add-to-cart-form" data-name="SaaS Website" data-price="99">
-<form method="post" class="add-to-cart" data-id="<?= $row['id'] ?>">
+<form method="post" class="add-to-cart.php" data-id="<?= $row['id'] ?>">
     <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
 </form>
 </form>
@@ -322,6 +250,146 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
 
         </div>
     </div>
+<div class="container project-section">
+    <div class="row project">
+
+        <!-- Projet 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="images/project1.jpg" class="card-img-top" alt="Business Website">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Business Website</h4>
+                    <p class="card-text">UI/UX · Jan 10, 2024</p>
+                    <form method="post" action="add_to_cart.php">
+                        <input type="hidden" name="product_name" value="Business Website">
+                        <input type="hidden" name="price" value="99">
+                        <button type="submit" class="btn w-100">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="images/project2.jpg" class="card-img-top" alt="Travel Website">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Travel Website</h4>
+                    <p class="card-text">UI/UX · Jun 29, 2023</p>
+                    <form method="post" action="add_to_cart.php">
+                        <input type="hidden" name="product_name" value="Travel Website">
+                        <input type="hidden" name="price" value="89">
+                        <button type="submit" class="btn w-100">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="images/project3.jpg" class="card-img-top" alt="E-Commerce Site">
+                <div class="card-body text-center">
+                    <h4 class="card-title">E-Commerce Site</h4>
+                    <p class="card-text">UI/UX · Mar 15, 2024</p>
+                    <form method="post" action="add_to_cart.php">
+                        <input type="hidden" name="product_name" value="E-Commerce Site">
+                        <input type="hidden" name="price" value="129">
+                        <button type="submit" class="btn w-100">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="images/project4.jpg" class="card-img-top" alt="Portfolio Website">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Portfolio Website</h4>
+                    <p class="card-text">UI/UX · Apr 20, 2024</p>
+                    <form method="post" action="add_to_cart.php">
+                        <input type="hidden" name="product_name" value="Portfolio Website">
+                        <input type="hidden" name="price" value="79">
+                        <button type="submit" class="btn w-100">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Fin .row -->
+</div> <!-- Fin .container -->
+<div class="container project-section">
+    <div class="row project">
+
+        <!-- Projet 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="images/project1.jpg" class="card-img-top" alt="Business Website">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Business Website</h4>
+                    <p class="card-text">UI/UX · Jan 10, 2024</p>
+                    <form method="post" action="add_to_cart.php">
+                        <input type="hidden" name="product_name" value="Business Website">
+                        <input type="hidden" name="price" value="99">
+                        <button type="submit" class="btn w-100">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="images/project2.jpg" class="card-img-top" alt="Travel Website">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Travel Website</h4>
+                    <p class="card-text">UI/UX · Jun 29, 2023</p>
+                    <form method="post" action="add_to_cart.php">
+                        <input type="hidden" name="product_name" value="Travel Website">
+                        <input type="hidden" name="price" value="89">
+                        <button type="submit" class="btn w-100">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="images/project3.jpg" class="card-img-top" alt="E-Commerce Site">
+                <div class="card-body text-center">
+                    <h4 class="card-title">E-Commerce Site</h4>
+                    <p class="card-text">UI/UX · Mar 15, 2024</p>
+                    <form method="post" action="add_to_cart.php">
+                        <input type="hidden" name="product_name" value="E-Commerce Site">
+                        <input type="hidden" name="price" value="129">
+                        <button type="submit" class="btn w-100">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="images/project4.jpg" class="card-img-top" alt="Portfolio Website">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Portfolio Website</h4>
+                    <p class="card-text">UI/UX · Apr 20, 2024</p>
+                    <form method="post" action="add_to_cart.php">
+                        <input type="hidden" name="product_name" value="Portfolio Website">
+                        <input type="hidden" name="price" value="79">
+                        <button type="submit" class="btn w-100">Ajouter au panier</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Fin .row -->
+</div> <!-- Fin .container -->
+
+                             
             </div> <!-- fin .row.project -->
 
         <div class="text-end mt-4">
@@ -352,7 +420,7 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12">
-                    <p class="logo"><i class="bi bi-chat"></i> SiteEx</p>
+                    <p class="logo"><i class="bi bi-chat"></i> Geiser</p>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <ul class="d-flex">
@@ -365,7 +433,7 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
                 </div>
 
                 <div class="col-lg-2 col-md-12 col-sm-12">
-                    <p>&copy;2025_SiteEx</p>
+                    <p>&copy;2025_Geiser</p>
                 </div>
 
                 <div class="col-lg-1 col-md-12 col-sm-12">
