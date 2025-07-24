@@ -38,7 +38,9 @@ if (!isset($_SESSION['cart'])) {
     <header class="navbar-section">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><i class="bi bi-chat"></i> SiteEx</a>
+                    <img src="images/geiser.png" alt="geiser" style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px;">
+
+                <a class="navbar-brand" href="#"> Geiser</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -107,17 +109,13 @@ if (!isset($_SESSION['cart'])) {
     </header>
 
 
-    <div class="name">
-        <center>Welcome
-            <?php
-            // echo $_SESSION['valid'];
-            
-            echo $_SESSION['username'];
+   <div class="name" id="welcomeMessage">
+    <center>Welcome
+        <?php echo $_SESSION['username']; ?> !
+    </center>
+</div>
 
-            ?>
-            !
-        </center>
-    </div>
+
 
     <!-- hero section  -->
 
@@ -407,7 +405,8 @@ if (!isset($_SESSION['cart'])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12">
-                    <p class="logo"><i class="bi bi-chat"></i> SiteEx</p>
+                                        <img src="images/geiser.png" alt="geiser" style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px;">
+
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <ul class="d-flex">
@@ -420,7 +419,8 @@ if (!isset($_SESSION['cart'])) {
                 </div>
 
                 <div class="col-lg-2 col-md-12 col-sm-12">
-                    <p>&copy;2025_SiteEx</p>
+                                        <img src="images/geiser.png" alt="geiser" style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px;">
+
                 </div>
 
                 <div class="col-lg-1 col-md-12 col-sm-12">
@@ -443,6 +443,17 @@ if (!isset($_SESSION['cart'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+        <script>
+    // Masquer le message après 3 secondes (3000 ms)
+    setTimeout(function () {
+        var welcome = document.getElementById("welcomeMessage");
+        if (welcome) {
+            welcome.style.display = "none";
+        }
+    }, 3000);
+</script>
+
+        
 </body>
 
 </html>

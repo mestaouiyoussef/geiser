@@ -146,7 +146,7 @@
 
 .name{
     font-size: 30px;
-    background-color: #2B547E;
+    background-color: #ebeff3;
     color: #FFA500;
     padding: 50px;
 }
@@ -506,6 +506,13 @@
     padding: 90px;
     /* height: 100vh; */
 }
+.name {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+}
+
 
 .produit-section .text h3 {
     font-size: 20px;

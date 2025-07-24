@@ -25,8 +25,10 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
 <a class="navbar-brand" href="#" style="color: #fb9e01;">
-  <img src="images/geiser.png" alt="Geiser Logo" style="height: 100px; width: 150px; border-radius: 50%; margin-right: 10px;">
-</a>
+<img src="images/geiser.png" alt="geiser"
+     style="height: 50px; width: 100px; border-radius: 50%; margin-top: 4px; filter: none !important;">
+
+                <a class="navbar-brand" href="#"> Geiser</a></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,9 +71,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">contact</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php">login</a>
-                        </li>
+                        <li class="nav-item dropdown">
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="loginMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Login
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="loginMenu">
+    <li><a class="dropdown-item" href="login.php?type=visiteur">En tant que Visiteur</a></li>
+    <li><a class="dropdown-item" href="login.php?type=admin">En tant qu'Admin</a></li>
+  </ul>
+</li>
+
+
                         <li class="nav-item">
                             <a class="nav-link" href="signup.php">signup</a>
                         </li>
@@ -265,7 +276,7 @@
 
     <!-- contact section  -->
 
-    <section class="contact-section" id="contact">
+    <section class="contact-section py-5" id="contact">
         <div class="container">
 
             <div class="row gy-4">
@@ -274,41 +285,49 @@
                 <div class="col-lg-6">
 
                     <div class="row gy-4">
-                        <div class="col-md-6">
-                            <div class="info-box">
-                                <i class="bi bi-geo-alt"></i>
-                                <h3>Address</h3>
-                                <p>GEISER 14,rue de commerce-BP 136 Charguia 1-1080 Tunis</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="info-box">
-                                <i class="bi bi-telephone"></i>
-                                <h3>Call Us</h3>
-                                <p>+216 70 600 000<br>+216 70 600 005</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="info-box">
-                                <i class="bi bi-envelope"></i>
-                                <h3>Email Us</h3>
-                                <p>Geiser@utic.com.tn</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="info-box">
-                                <i class="bi bi-clock"></i>
-                                <h3>Open Hours</h3>
-                                <p>Monday - Friday<br>9:00AM - 06:00PM</p>
-                            </div>
-                        </div>
-                    </div>
+                       <div class="col-md-6">
+    <a href="adresse.html" style="text-decoration: none; color: inherit;">
+        <div class="info-box">
+            <i class="bi bi-geo-alt"></i>
+            <h3>Address</h3>
+            <p>GEISER 14,rue de commerce-BP 136 Charguia 1-1080 Tunis </p>
+        </div>
+    </a>
+</div>
 
-                </div>
+                       <div class="col-md-6">
+    <a href="appel.html" style="text-decoration: none; color: inherit;">
+        <div class="info-box">
+            <i class="bi bi-telephone"></i>
+            <h3>Call Us</h3>
+            <p>+216 70 600 000<br>+216 70 600 005</p>
+        </div>
+    </a>
+</div>
 
-                <div class="col-lg-6 form">
+<div class="col-md-6">
+    <a href="email.html" style="text-decoration: none; color: inherit;">
+        <div class="info-box">
+            <i class="bi bi-envelope"></i>
+            <h3>Email Us</h3>
+            <p>Geiser@utic.com.tn</p>
+        </div>
+    </a>
+</div>
+
+<div class="col-md-6">
+    <a href="horaire.php" style="text-decoration: none; color: inherit;">
+        <div class="info-box">
+            <i class="bi bi-clock"></i>
+            <h3>Open Hours</h3>
+            <p>Monday - Friday<br>9:00AM - 06:00PM</p>
+        </div>
+    </a>
+</div>
+
+                <div class="col-lg-12 form">
                     <form action="contact.php" method="POST" class="php-email-form">
-                        <div class="row gy-4">
+                        <div class="row gy-6">
 
                             <div class="col-md-6">
                                 <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -371,7 +390,7 @@
                 <li><a href="#">Sécurité</a></li>
             </ul>
         </div>
-           <div class="col-lg-1 col-md-12 col-sm-12">
+           <div class="col-lg-1 col-md-12 col-sm-12">   
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
       </div>
     </div>

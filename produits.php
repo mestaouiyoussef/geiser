@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -50,9 +51,9 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
             // Mettre à jour le compteur du panier
             <a href="panier.php" class="btn btn-warning position-relative">
     Panier 🛒
-    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">   
         <?= $nb_articles ?>
-    </span>
+    </span>  
 </a>
 
             const cartCount = document.getElementById('cart-link');
@@ -74,7 +75,8 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
                 <a class="navbar-brand d-flex align-items-center" href="#">
 
   <div class="d-flex flex-column">    
-    <img src="images/geiser.png" alt="geiser" style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px;">
+<img src="images/geiser.png" alt="Geiser"
+     style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px; filter: none !important;">
   </div>
 </a>
 
@@ -101,8 +103,14 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
                         </li>
                         <li class="nav-item">
     <a class="nav-link" href="cart.php">
-        <i class="bi bi-cart"></i> Panier (<?= isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>)
-    </a>
+         <!-- Compteur Panier -->
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.php" id="cart-link">
+                            <i class="bi bi-cart"></i> Panier
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <?= count($_SESSION['cart']) ?>
+                            </span>
+                        </a>
 </li>
 
                         <li class="nav-item">
@@ -174,6 +182,7 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
         </div>
 
         <div class="row project justify-content-center">
+            
 
             <!-- Projet 1 -->
             <div class="col-lg-3 col-md-6 col-sm-12">

@@ -1,5 +1,6 @@
 <?php
 session_start();
+$type = $_GET['type'] ?? 'visiteur';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,64 +24,57 @@ session_start();
 
         $email = $_POST['email'];
         $pass = $_POST['password'];
+        $type = $_POST['type'] ?? 'visiteur';
 
-        $sql = "select * from users where email='$email'";
+        // Choisir la bonne table selon le type
+        $table = ($type === 'admin') ? 'admins' : 'users';
 
+        $sql = "SELECT * FROM $table WHERE email='$email'";
         $res = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($res) > 0) {
 
           $row = mysqli_fetch_assoc($res);
-
           $password = $row['password'];
 
-          $decrypt = password_verify($pass, $password);
-
-
-          if ($decrypt) {
+          if (password_verify($pass, $password)) {
             $_SESSION['id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
-            header("location: home.php");
+            $_SESSION['type'] = $type;
 
+            if ($type === 'admin') {
+              header("location: admin_dashboard.php");
+            } else {
+              header("location: home.php");
+            }
 
           } else {
-            echo "<div class='message'>
-                    <p>Wrong Password</p>
-                    </div><br>";
-
-            echo "<a href='login.php'><button class='btn'>Go Back</button></a>";
+            echo "<div class='message'><p>Wrong Password</p></div><br>";
+            echo "<a href='login.php?type=$type'><button class='btn'>Go Back</button></a>";
           }
 
         } else {
-          echo "<div class='message'>
-                    <p>Wrong Email or Password</p>
-                    </div><br>";
-
-          echo "<a href='login.php'><button class='btn'>Go Back</button></a>";
-
+          echo "<div class='message'><p>Wrong Email or Password</p></div><br>";
+          echo "<a href='login.php?type=$type'><button class='btn'>Go Back</button></a>";
         }
 
-
       } else {
+      ?>
 
-
-        ?>
-
-        <header>Login</header>
+        <header>Login <?php echo ($type === 'admin') ? '(Admin)' : '(Visiteur)'; ?></header>
         <hr>
-        <form action="#" method="POST">
+        <form action="login.php?type=<?php echo $type; ?>" method="POST">
+          <input type="hidden" name="type" value="<?php echo $type; ?>">
 
           <div class="form-box">
-
-
             <div class="input-container">
               <i class="fa fa-envelope icon"></i>
-              <input class="input-field" type="email" placeholder="Email Address" name="email">
+              <input class="input-field" type="email" placeholder="Email Address" name="email" required>
             </div>
 
             <div class="input-container">
               <i class="fa fa-lock icon"></i>
-              <input class="input-field password" type="password" placeholder="Password" name="password">
+              <input class="input-field password" type="password" placeholder="Password" name="password" required>
               <i class="fa fa-eye toggle icon"></i>
             </div>
 
@@ -89,10 +83,7 @@ session_start();
               <label for="remember">Remember me</label>
               <span><a href="forgot.php">Forgot password</a></span>
             </div>
-
           </div>
-
-
 
           <input type="submit" name="login" id="submit" value="Login" class="btn">
 
@@ -101,11 +92,10 @@ session_start();
           </div>
 
         </form>
-      </div>
-      <?php
-      }
-      ?>
+    </div>
+  <?php } ?>
   </div>
+
   <script>
     const toggle = document.querySelector(".toggle"),
       input = document.querySelector(".password");
@@ -121,3 +111,28 @@ session_start();
 </body>
 
 </html>
+<?php
+include "connection.php";
+
+// Créer un admin avec mot de passe hashé
+$email = $_POST['email'];
+$password = $_POST['password']; // et hashé ensuite !
+
+// Vérifier si l'email existe déjà
+$checkQuery = "SELECT * FROM admins WHERE email = '$email'";
+$result = mysqli_query($conn, $checkQuery);
+
+if (mysqli_num_rows($result) > 0) {
+    echo "Cet email est déjà utilisé.";
+} else {
+    // Insérer l'admin si email non utilisé
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    $insertQuery = "INSERT INTO admins (email, password) VALUES ('$email', '$hashedPassword')";
+    if (mysqli_query($conn, $insertQuery)) {
+        echo "Admin ajouté avec succès.";
+    } else {
+        echo "Erreur lors de l'ajout.";
+    }
+}
+
+?>
