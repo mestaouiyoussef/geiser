@@ -7,7 +7,13 @@ session_start();
 <head>
     <title>Panier</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <style>
+        .product-img {
+            max-width: 60px;
+            height: auto;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 <div class="container mt-5">
@@ -17,6 +23,7 @@ session_start();
         <table class="table table-bordered">
             <thead>
                 <tr>
+                    <th>Image</th> <!-- ✅ nouvelle colonne -->
                     <th>Produit</th>
                     <th>Prix</th>
                     <th>Quantité</th>
@@ -28,9 +35,12 @@ session_start();
                 <?php foreach ($_SESSION['cart'] as $index => $item): ?>
                     <tr>
                         <form method="post" action="update_cart.php">
-                            <td><?= htmlspecialchars($item['product']) ?></td>
+                            <td>
+                                <img src="<?= htmlspecialchars($item['image'] ?? 'images/default-product.jpg') ?>" 
+                                     alt="Image produit" class="product-img">
+                            </td>
+                            <td><?= htmlspecialchars($item['product'] ?? 'Produit sans nom') ?></td>
                             <td><?= number_format($item['price'], 2) ?> €</td>
-                          
                             <td>
                                 <input type="number" name="quantity" value="<?= isset($item['quantity']) ? $item['quantity'] : 1 ?>" min="1" class="form-control" style="width: 80px;">
                             </td>
@@ -42,13 +52,13 @@ session_start();
                         </form>
                     </tr>
                     <?php
-                        $qty = isset($item['quantity']) ? $item['quantity'] : 5;
+                        $qty = isset($item['quantity']) ? $item['quantity'] : 1;
                         $total += $item['price'] * $qty;
                     ?>
                 <?php endforeach; ?>
                 <tr>
-                    <td colspan="2" class="text-end"><strong>Total :</strong></td>
-                    <td><strong><?= number_format($total, 3) ?> </strong></td>
+                    <td colspan="3" class="text-end"><strong>Total :</strong></td>
+                    <td colspan="2"><strong><?= number_format($total, 3) ?> €</strong></td>
                 </tr>
             </tbody>
         </table>

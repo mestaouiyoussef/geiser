@@ -308,8 +308,8 @@ if (!isset($_SESSION['cart'])) {
                     </div> <!-- fin .row.project -->
 
         <div class="text-end mt-4">
-    <form action="produit.php" method="get">
-        <button type="submit" class="voir-tous-btn">Voir tous les produits</button>
+    <form action="produits.php" method="get">
+        <button type="submit" class="voir-tous-btn"><a href="produits.php">Voir tous les produits</a></button>
     </form>
 </div>
 
@@ -438,8 +438,6 @@ if (!isset($_SESSION['cart'])) {
 
 
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
@@ -451,7 +449,45 @@ if (!isset($_SESSION['cart'])) {
             welcome.style.display = "none";
         }
     }, 3000);
+    // Gestion AJAX ajout panier - Version ciblée
+document.querySelectorAll('form.add-to-cart-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const submitButton = this.querySelector('button[type="submit"]');
+        
+        submitButton.disabled = true;
+        submitButton.textContent = 'Ajout en cours...';
+        
+        fetch('add_to_cart.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Erreur réseau');
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                document.getElementById('cart-count').textContent = data.cart_count;
+                alert('Produit ajouté au panier!');
+            } else {
+                alert('Erreur: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Erreur technique');
+        })
+        .finally(() => {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Ajouter au panier';
+        });
+    });
+});
 </script>
+
 
         
 </body>

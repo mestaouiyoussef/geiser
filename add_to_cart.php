@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $product_id = $_POST['product_id'] ?? null;
     $product_name = $_POST['product_name'] ?? null;
     $price = $_POST['price'] ?? null;
+    $image = $_POST['image'] ?? null;
 
     if ($product_name && $price) {
         $found = false;
@@ -28,12 +29,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'id' => $product_id,
                 'product' => $product_name,
                 'price' => (float)$price,
-                'quantity' => 1
+                'quantity' => 1,
+                'image' => $image
             ];
         }
     }
-
-    header("Location: produits.php?added=1");
-exit;
-
 }
+
+header("Content-Type: application/json");
+echo json_encode([
+    "success" => true,
+    "cart_count" => count($_SESSION['cart'])
+]);
+exit;
