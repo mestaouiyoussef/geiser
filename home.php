@@ -249,14 +249,13 @@ if (!isset($_SESSION['cart'])) {
                 </div>
             </div>
             <div class="row project">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
                         <img src="images/project1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
-                                <h4 class="card-title">SaaS Website</h4>
-                                <p class="card-text">Development. Jan 19,2022</p>
-                               <form method="post" action="add_to_cart.php">
+                                <h4 class="card-title">Travel Website</h4>
+                                <p class="card-text">UI/UX Jun 29,2023</p>
                                 <button><a href="project1.html">Voir projet</a></button>
                             </div>
                         </div>
@@ -449,44 +448,7 @@ if (!isset($_SESSION['cart'])) {
             welcome.style.display = "none";
         }
     }, 3000);
-    // Gestion AJAX ajout panier - Version ciblée
-document.querySelectorAll('form.add-to-cart-form').forEach(form => {
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(this);
-        const submitButton = this.querySelector('button[type="submit"]');
-        
-        submitButton.disabled = true;
-        submitButton.textContent = 'Ajout en cours...';
-        
-        fetch('add_to_cart.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (!response.ok) throw new Error('Erreur réseau');
-            return response.json();
-        })
-        .then(data => {
-            if (data.success) {
-                document.getElementById('cart-count').textContent = data.cart_count;
-                alert('Produit ajouté au panier!');
-            } else {
-                alert('Erreur: ' + data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Erreur technique');
-        })
-        .finally(() => {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Ajouter au panier';
-        });
-    });
-});
-</script>
+   
 
 
         
