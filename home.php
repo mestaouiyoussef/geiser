@@ -39,8 +39,6 @@ if (!isset($_SESSION['cart'])) {
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                     <img src="images/geiser.png" alt="geiser" style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px;">
-
-                <a class="navbar-brand" href="#"> Geiser</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -437,21 +435,26 @@ if (!isset($_SESSION['cart'])) {
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-        <script>
-    // Masquer le message après 3 secondes (3000 ms)
+
+        
+        <!-- welcome message -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         var welcome = document.getElementById("welcomeMessage");
         if (welcome) {
-            welcome.style.display = "none";
+            welcome.style.transition = "opacity 2s";
+            welcome.style.opacity = "0";
+            setTimeout(function () {
+                welcome.style.display = "none";
+            }, 1000); // attendre la fin du fondu
         }
     }, 3000);
-   
+});
+</script>
 
-
-        
 </body>
-
 </html>

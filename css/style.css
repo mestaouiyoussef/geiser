@@ -844,3 +844,17 @@ footer p {
         letter-spacing: 0;
     }
 }
+
+/* syle des icones de la navbar */
+.bi-cart,
+.bi-person,
+.bi-box-arrow-right,
+.bi-box-arrow-left,
+.navbar .bi-cart,
+.navbar .bi-person,
+.navbar .bi-box-arrow-right,
+.navbar .bi-box-arrow-left {
+    color: #fb9e01 !important;
+    /* Optionnel : pour grossir un peu l'icône */
+    font-size: 1.0em;
+}
