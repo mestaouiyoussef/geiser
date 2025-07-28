@@ -21,14 +21,13 @@
     <!-- navbar section   -->
      
 
-    <header class="navbar-section">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-<a class="navbar-brand" href="#" style="color: #fb9e01;">
-<img src="images/geiser.png" alt="geiser"
-     style="height: 50px; width: 100px; border-radius: 50%; margin-top: 4px; filter: none !important;">
+<header class="navbar-section">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #fb9e01;">
+                <img src="images/geiser.png" alt="geiser" class="footer-logo"
 
-                <a class="navbar-brand" href="#"> Geiser</a></a>
+                <a class="navbar-brand" href="#"> </a></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
