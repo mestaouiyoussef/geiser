@@ -43,7 +43,6 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <a class="navbar-brand d-flex align-items-center" href="#">
 
                     <img src="images/geiser.png" alt="Geiser"
-                        style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px; filter: none !important;" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -93,7 +92,7 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
 
     <!-- Message de bienvenue -->
     <div class="name text-center mt-3" id="welcome-message">
-        Welcome <?= htmlspecialchars($_SESSION['username']); ?> !
+        Bienvenue dans vos produits disponibles <?= htmlspecialchars($_SESSION['username']); ?> !
     </div>
 
     <script>
@@ -230,36 +229,120 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                         </div>
                     </div>
                 </div>
+                <!-- Projet 1 -->
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="card h-100">
+                        <img src="images/project1.jpg" class="card-img-top" alt="SaaS Website">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h4 class="card-title">SaaS Website</h4>
+                            <p class="card-text">Développement web avancé</p>
+                            <p class="mt-auto"><strong>99.00 TND</strong></p>
+                            <form method="post" action="add_to_cart.php" class="add-to-cart-form">
+                                <input type="hidden" name="product_id" value="101">
+                                <input type="hidden" name="product_name" value="SaaS Website">
+                                <input type="hidden" name="price" value="99">
+                                <input type="hidden" name="image" value="images/project1.jpg">
+                                <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="card h-100">
+                        <img src="images/project2.jpg" class="card-img-top" alt="Travel Website">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h4 class="card-title">Travel Website</h4>
+                            <p class="card-text">Design UI/UX moderne</p>
+                            <p class="mt-auto"><strong>89.00 TND</strong></p>
+                            <form method="post" action="add_to_cart.php" class="add-to-cart-form">
+                                <input type="hidden" name="product_id" value="102">
+                                <input type="hidden" name="product_name" value="Travel Website">
+                                <input type="hidden" name="price" value="89">
+                                <input type="hidden" name="image" value="images/project2.jpg">
+                                <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="card h-100">
+                        <img src="images/project3.jpg" class="card-img-top" alt="E-Commerce">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h4 class="card-title">E-Commerce</h4>
+                            <p class="card-text">Solution e-commerce complète</p>
+                            <p class="mt-auto"><strong>129.00 TND</strong></p>
+                            <form method="post" action="add_to_cart.php" class="add-to-cart-form">
+                                <input type="hidden" name="product_id" value="103">
+                                <input type="hidden" name="product_name" value="E-Commerce">
+                                <input type="hidden" name="price" value="129">
+                                <input type="hidden" name="image" value="images/project3.jpg">
+                                <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="card h-100">
+                        <img src="images/project4.jpg" class="card-img-top" alt="Portfolio">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h4 class="card-title">Portfolio</h4>
+                            <p class="card-text">Site portfolio élégant</p>
+                            <p class="mt-auto"><strong>79.00 TND</strong></p>
+                            <form method="post" action="add_to_cart.php" class="add-to-cart-form">
+                                <input type="hidden" name="product_id" value="104">
+                                <input type="hidden" name="product_name" value="Portfolio">
+                                <input type="hidden" name="price" value="79">
+                                <input type="hidden" name="image" value="images/project4.jpg">
+                                <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- footer section  -->
+
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12">
-                    <p class="logo"><i class="bi bi-chat"></i> Geiser</p>
+                                        <img src="images/geiser.png" alt="geiser" style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px;">
+
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
-                    <ul class="d-flex list-unstyled justify-content-center">
-                        <li class="mx-3"><a href="home.php">Home</a></li>
-                        <li class="mx-3"><a href="#services">services</a></li>
-                        <li class="mx-3"><a href="#projects">projects</a></li>
-                        <li class="mx-3"><a href="#about">about us</a></li>
-                        <li class="mx-3"><a href="#contact">contact</a></li>
+                    <ul class="d-flex">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">projects</a></li>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-12 col-sm-12 text-center">
-                    <p>&copy;2025_Geiser</p>
+
+                <div class="col-lg-2 col-md-12 col-sm-12">
+                                        <img src="images/geiser.png" alt="geiser" style="height: 50px; width: 80px; border-radius: 50%; margin-top: 4px;">
+
                 </div>
-                <div class="col-lg-1 col-md-12 col-sm-12 d-flex align-items-center justify-content-center">
-                    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-                        <i class="bi bi-arrow-up-short"></i>
-                    </a>
+
+                <div class="col-lg-1 col-md-12 col-sm-12">
+                    <!-- back to top  -->
+
+                    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                            class="bi bi-arrow-up-short"></i></a>
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

@@ -136,7 +136,7 @@ if (!isset($_SESSION['cart'])) {
 
     <!-- services section  -->
 
-    <section class="services-section" id="services">
+    <section class="services-section" id="servicess">
         <div class="container">
             <div class="row">
 
@@ -145,25 +145,20 @@ if (!isset($_SESSION['cart'])) {
                     <div class="row row1">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="card">
-                                <img src="images/research.png" class="card-img-top" alt="...">
+                                <img src="images/camera.gif" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h4 class="card-title">Research</h4>
-                                    <p class="card-text">We build effective strategies to help you reach customers
-                                        and
-                                        prospects
-                                        across the entire.</p>
+                                    <h4 class="card-title">Vidéo-surveillance</h4>
+                                    <p class="card-text">Piloter les projets de vidéo-Surveillance et de sûreté</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="card">
-                                <img src="images/brand.png" class="card-img-top" alt="...">
+                                <img src="images/serveuri.gif" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h4 class="card-title">Branding</h4>
-                                    <p class="card-text">Brand identity represents the visual elements and assets
-                                        that
-                                        distinguish a brand.</p>
+                                    <h4 class="card-title">Serveurs privés virtuels (VPS)</h4>
+                                    <p class="card-text">Hébergement et virtualisation des serveurs, services à valeurs ajoutées :SMS, mailing et affichage Urbain LED.</p>
                                 </div>
                             </div>
                         </div>
@@ -174,24 +169,20 @@ if (!isset($_SESSION['cart'])) {
 
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="card">
-                                <img src="images/ux.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h4 class="card-title">UI/UX Design</h4>
-                                    <p class="card-text">UI/UX design services focus on creating intuitive &
-                                        user-centric
-                                        interfaces for digital products.</p>
+<img class="img-fluid" src="images/serveur.jpg" alt="images" />
+                            <div class="card-body">
+                                    <h4 class="card-title">Intégration de solutions Informatiques</h4>
+                                    <p class="card-text">GEISER vous fournit une infrastructure informatique complète, planifiée et parfaitement cohérente.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="card">
-                                <img src="images/app-development.png" class="card-img-top" alt="...">
+                                <img src="images/developpement.avif" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h4 class="card-title">Development</h4>
-                                    <p class="card-text">A concept is brought to life through the services various
-                                        stages, such
-                                        as planning, testing and deployment.</p>
+                                    <p class="card-text">Un concept prend vie à travers les différentes étapes des services, telles que la planification, les tests et le déploiement.</p>
                                 </div>
                             </div>
                         </div>
@@ -201,9 +192,8 @@ if (!isset($_SESSION['cart'])) {
 
                 <div class="col-lg-6 col-md-12 col-sm-12 text-content">
                     <h3>services</h3>
-                    <h1>We can help you solve your problem through our service.</h1>
-                    <p>We are a brand strategy & digital design agency building brands that matter in culture with more
-                        than ten years of experience.</p>
+                    <h1>Nous pouvons vous aider à résoudre votre problème grâce à notre service.</h1>
+                    <p>Nous sommes une agence de stratégie de marque et de conception numérique qui construit des marques qui comptent dans la culture avec plus de dix ans d'expérience.</p>
                     <button class="btn">Explore Services</button>
                 </div>
 
@@ -439,7 +429,7 @@ if (!isset($_SESSION['cart'])) {
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 
-        
+
         <!-- welcome message -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
