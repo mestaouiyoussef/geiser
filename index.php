@@ -315,7 +315,7 @@
 </div>
 
 <div class="col-md-6">
-    <a href="horaire.php" style="text-decoration: none; color: inherit;">
+    <a href="horaire.html" style="text-decoration: none; color: inherit;">
         <div class="info-box">
             <i class="bi bi-clock"></i>
             <h3>Open Hours</h3>
