@@ -61,7 +61,7 @@ $type = $_GET['type'] ?? 'visiteur';
       } else {
       ?>
 
-        <header>Login <?php echo ($type === 'admin') ? '(Admin)' : '(Visiteur)'; ?></header>
+        <header>Login <?php echo ($type === 'admin') ? '(Admin)' : '(client)'; ?></header>
         <hr>
         <form action="login.php?type=<?php echo $type; ?>" method="POST">
           <input type="hidden" name="type" value="<?php echo $type; ?>">
@@ -81,7 +81,7 @@ $type = $_GET['type'] ?? 'visiteur';
             <div class="remember">
               <input type="checkbox" class="check" name="remember_me">
               <label for="remember">Remember me</label>
-              <span><a href="forgot.php">Forgot password</a></span>
+              <span><a href="forgot.php">Forget password</a></span>
             </div>
           </div>
 

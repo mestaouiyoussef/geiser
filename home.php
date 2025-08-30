@@ -89,7 +89,7 @@ if (!isset($_SESSION['cart'])) {
                                         }
 
 
-                                        echo "<a class='dropdown-item' href='edit.php?id=$res_id'>Change Profile</a>";
+                                        echo "<a class='dropdown-item' href='edit.php?id=$res_id'>update Profile</a>";
 
 
                                         ?>

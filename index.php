@@ -76,7 +76,7 @@
     Login
   </a>
   <ul class="dropdown-menu" aria-labelledby="loginMenu">
-    <li><a class="dropdown-item" href="login.php?type=visiteur">En tant que Visiteur</a></li>
+    <li><a class="dropdown-item" href="login.php?type=visiteur">En tant que client</a></li>
     <li><a class="dropdown-item" href="login.php?type=admin">En tant qu'Admin</a></li>
   </ul>
 </li>

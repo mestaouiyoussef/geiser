@@ -56,7 +56,7 @@ if (!isset($_SESSION['username'])) {
 
                 ?>
 
-                <header>Change Profile</header>
+                <header>update Profile</header>
                 <form action="#" method="POST" enctype="multipart/form-data">
 
                     <div class="form-box">

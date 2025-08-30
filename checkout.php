@@ -110,18 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container py-5">
         <div class="row">
             <div class="col-md-8">
-                <h2 class="mb-4">Informations de livraison</h2>
-                
-                <?php if (!empty($errors)): ?>
-                    <div class="alert alert-danger">
-                        <h5>Erreurs :</h5>
-                        <ul>
-                            <?php foreach ($errors as $error): ?>
-                                <li><?= htmlspecialchars($error) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                <?php endif; ?>
+          
                 
                 <form method="post">
                     <div class="mb-3">

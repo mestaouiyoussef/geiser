@@ -144,12 +144,12 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
         <div class="container">
             <div class="row text mb-5">
                 <div class="col-lg-6 col-md-12">
-                    <h3>Nos projets</h3>
-                    <h1>Nos réalisations récentes</h1>
+                    <h3>Nos produits</h3>
+                    <h1>Nos Produits récentes</h1>
                     <hr>
                 </div>
                 <div class="col-lg-6 col-md-12">
-                    <p>Découvrez nos projets qui ont marqué notre histoire.</p>
+                    <p>Découvrez nos produits ont marqué notre histoire.</p>
                 </div>
             </div>
 
@@ -157,14 +157,14 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <!-- Projet 1 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="card h-100">
-                        <img src="images/project1.jpg" class="card-img-top" alt="SaaS Website">
+                        <img src="images/project1.jpg" class="card-img-top" alt="Asus">
                         <div class="card-body text-center d-flex flex-column">
-                            <h4 class="card-title">SaaS Website</h4>
-                            <p class="card-text">Développement web avancé</p>
+                            <h4 class="card-title">Asus</h4>
+                            <p class="card-text">Pc portable</p>
                             <p class="mt-auto"><strong>99.00 TND</strong></p>
                             <form method="post" action="add_to_cart.php" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="101">
-                                <input type="hidden" name="product_name" value="SaaS Website">
+                                <input type="hidden" name="product_name" value="Asus">
                                 <input type="hidden" name="price" value="99">
                                 <input type="hidden" name="image" value="images/project1.jpg">
                                 <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
@@ -176,14 +176,14 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <!-- Projet 2 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="card h-100">
-                        <img src="images/project2.jpg" class="card-img-top" alt="Travel Website">
+                        <img src="images/project2.jpg" class="card-img-top" alt="imprimante">
                         <div class="card-body text-center d-flex flex-column">
-                            <h4 class="card-title">Travel Website</h4>
-                            <p class="card-text">Design UI/UX moderne</p>
+                            <h4 class="card-title">imprimante</h4>
+                            <p class="card-text">imprimante moderne:Formats : A4, A3, enveloppes, étiquettes, papier photo.</p>
                             <p class="mt-auto"><strong>89.00 TND</strong></p>
                             <form method="post" action="add_to_cart.php" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="102">
-                                <input type="hidden" name="product_name" value="Travel Website">
+                                <input type="hidden" name="product_name" value="imprimante">
                                 <input type="hidden" name="price" value="89">
                                 <input type="hidden" name="image" value="images/project2.jpg">
                                 <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
@@ -195,14 +195,15 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <!-- Projet 3 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="card h-100">
-                        <img src="images/project3.jpg" class="card-img-top" alt="E-Commerce">
+                        <img src="images/project3.jpg" class="card-img-top" alt="clavier">
                         <div class="card-body text-center d-flex flex-column">
-                            <h4 class="card-title">E-Commerce</h4>
-                            <p class="card-text">Solution e-commerce complète</p>
+                            <h4 class="card-title">clavier</h4>
+                            <p class="card-text">clavier sans fils:Compatibilité :
+Windows, macOS, Linux, parfois Android/iOS.</p>
                             <p class="mt-auto"><strong>129.00 TND</strong></p>
                             <form method="post" action="add_to_cart.php" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="103">
-                                <input type="hidden" name="product_name" value="E-Commerce">
+                                <input type="hidden" name="product_name" value="clavier">
                                 <input type="hidden" name="price" value="129">
                                 <input type="hidden" name="image" value="images/project3.jpg">
                                 <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
@@ -214,14 +215,14 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <!-- Projet 4 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="card h-100">
-                        <img src="images/project4.jpg" class="card-img-top" alt="Portfolio">
+                        <img src="images/project4.jpg" class="card-img-top" alt="RAM">
                         <div class="card-body text-center d-flex flex-column">
-                            <h4 class="card-title">Portfolio</h4>
-                            <p class="card-text">Site portfolio élégant</p>
+                            <h4 class="card-title">RAM</h4>
+                            <p class="card-text">4 Go, 8 Go, 16 Go, 32 Go…</p>
                             <p class="mt-auto"><strong>79.00 TND</strong></p>
                             <form method="post" action="add_to_cart.php" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="104">
-                                <input type="hidden" name="product_name" value="Portfolio">
+                                <input type="hidden" name="product_name" value="RAM">
                                 <input type="hidden" name="price" value="79">
                                 <input type="hidden" name="image" value="images/project4.jpg">
                                 <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
@@ -232,14 +233,14 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <!-- Projet 1 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="card h-100">
-                        <img src="images/project1.jpg" class="card-img-top" alt="SaaS Website">
+                        <img src="images/project1.jpg" class="card-img-top" alt="Pc">
                         <div class="card-body text-center d-flex flex-column">
-                            <h4 class="card-title">SaaS Website</h4>
-                            <p class="card-text">Développement web avancé</p>
+                            <h4 class="card-title">Pc</h4>
+                            <p class="card-text">Acer</p>
                             <p class="mt-auto"><strong>99.00 TND</strong></p>
                             <form method="post" action="add_to_cart.php" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="101">
-                                <input type="hidden" name="product_name" value="SaaS Website">
+                                <input type="hidden" name="product_name" value="Pc">
                                 <input type="hidden" name="price" value="99">
                                 <input type="hidden" name="image" value="images/project1.jpg">
                                 <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
@@ -251,14 +252,14 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <!-- Projet 2 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="card h-100">
-                        <img src="images/project2.jpg" class="card-img-top" alt="Travel Website">
+                        <img src="images/project2.jpg" class="card-img-top" alt="disque dure">
                         <div class="card-body text-center d-flex flex-column">
-                            <h4 class="card-title">Travel Website</h4>
-                            <p class="card-text">Design UI/UX moderne</p>
+                            <h4 class="card-title">disque dure</h4>
+                            <p class="card-text">..........</p>
                             <p class="mt-auto"><strong>89.00 TND</strong></p>
                             <form method="post" action="add_to_cart.php" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="102">
-                                <input type="hidden" name="product_name" value="Travel Website">
+                                <input type="hidden" name="product_name" value="disque dure">
                                 <input type="hidden" name="price" value="89">
                                 <input type="hidden" name="image" value="images/project2.jpg">
                                 <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
@@ -270,14 +271,14 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <!-- Projet 3 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="card h-100">
-                        <img src="images/project3.jpg" class="card-img-top" alt="E-Commerce">
+                        <img src="images/project3.jpg" class="card-img-top" alt="kits">
                         <div class="card-body text-center d-flex flex-column">
-                            <h4 class="card-title">E-Commerce</h4>
-                            <p class="card-text">Solution e-commerce complète</p>
+                            <h4 class="card-title">kits</h4>
+                            <p class="card-text">kit Bluetooth</p>
                             <p class="mt-auto"><strong>129.00 TND</strong></p>
                             <form method="post" action="add_to_cart.php" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="103">
-                                <input type="hidden" name="product_name" value="E-Commerce">
+                                <input type="hidden" name="product_name" value="kits">
                                 <input type="hidden" name="price" value="129">
                                 <input type="hidden" name="image" value="images/project3.jpg">
                                 <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
@@ -289,14 +290,16 @@ $produits_query = mysqli_query($conn, "SELECT * FROM produits ORDER BY id DESC")
                 <!-- Projet 4 -->
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                     <div class="card h-100">
-                        <img src="images/project4.jpg" class="card-img-top" alt="Portfolio">
+                        <img src="images/project4.jpg" class="card-img-top" alt="carte graphique">
                         <div class="card-body text-center d-flex flex-column">
-                            <h4 class="card-title">Portfolio</h4>
-                            <p class="card-text">Site portfolio élégant</p>
+                            <h4 class="card-title">carte graphique</h4>
+                            <p class="card-text">Type de mémoire :
+GDDR5, GDDR6, GDDR6X (rapides).
+HBM / HBM2 (très haut débit, surtout dans les cartes pro).</p>
                             <p class="mt-auto"><strong>79.00 TND</strong></p>
                             <form method="post" action="add_to_cart.php" class="add-to-cart-form">
                                 <input type="hidden" name="product_id" value="104">
-                                <input type="hidden" name="product_name" value="Portfolio">
+                                <input type="hidden" name="product_name" value="carte graphique">
                                 <input type="hidden" name="price" value="79">
                                 <input type="hidden" name="image" value="images/project4.jpg">
                                 <button type="submit" class="btn btn-orange w-100">Ajouter au panier</button>
