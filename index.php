@@ -49,20 +49,20 @@
     Produits
   </a>
   <ul class="dropdown-menu" aria-labelledby="produitMenu">
-    <li><a class="dropdown-item" href="#">Écran</a></li>
-    <li><a class="dropdown-item" href="#">PC</a></li>
-    <li><a class="dropdown-item" href="#">Imprimante</a></li>
+    <li><a class="dropdown-item" href="#produits">Écran</a></li>
+    <li><a class="dropdown-item" href="#produits">PC</a></li>
+    <li><a class="dropdown-item" href="#produits">Imprimante</a></li>
 
     <li class="dropdown-submenu">
-      <a class="dropdown-item dropdown-toggle" href="#">Accessoire</a>
+      <a class="dropdown-item dropdown-toggle" href="#produits">Accessoire</a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Flash et Kits</a></li>
-        <li><a class="dropdown-item" href="#">Carte Mémoire</a></li>
+        <li><a class="dropdown-item" href="#produits">Flash et Kits</a></li>
+        <li><a class="dropdown-item" href="#produits">Carte Mémoire</a></li>
       </ul>
     </li>
 
-    <li><a class="dropdown-item" href="#">Logiciel</a></li>
-    <li><a class="dropdown-item" href="#">Caméra</a></li>
+    <li><a class="dropdown-item" href="#produits">Logiciel</a></li>
+    <li><a class="dropdown-item" href="#produits">Caméra</a></li>
   </ul>
 </li>
     
@@ -183,11 +183,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
-                    <img src="images/about.jpg" alt="" class="img-fluid">
+                    <img src="images/geiser1.jpg" alt="" class="img-fluid">
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 text-content">
-                    <h3>who we are</h3>
-                    <h1>Providing creative and technology services for growing brands.</h1>
+                    <h3>Qui sommes-nous ?</h3>
+                    <h1>Geiser, votre partenaire en solutions informatiques et digitales..</h1>
 
                     <p>Our company specializes in research, brand identity design, UI/UX design, development and graphic
                         design. To help our clients improve their business, we work with them all over the world.</p>
@@ -217,7 +217,7 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
-                        <img src="images/project1.jpg" class="card-img-top" alt="...">
+                        <img src="images/pc.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
                                 <h4 class="card-title">ordinateur prtable</h4>
@@ -230,7 +230,7 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
-                        <img src="images/project2.jpg" class="card-img-top" alt="...">
+                        <img src="images/accesoires1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
                                 <h4 class="card-title">Accessoire</h4>
@@ -244,7 +244,7 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
-                        <img src="images/project3.jpg" class="card-img-top" alt="...">
+                        <img src="images/imprimante.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
                                 <h4 class="card-title">Imprimante</h4>
@@ -257,7 +257,7 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
-                        <img src="images/project4.jpg" class="card-img-top" alt="...">
+                        <img src="images/ecran.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
                                 <h4 class="card-title">ecran</h4>
