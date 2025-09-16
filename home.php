@@ -124,7 +124,7 @@ if (!isset($_SESSION['cart'])) {
                     <h1>the digital service you really want</h1>
                     <p>We build effective strategies to help you reach customers and prospects across the entire web.
                     </p>
-                    <button class="btn"><a href="#">Estimate Project</a></button>
+                    <button class="btn"><a href="#">Estimate Product</a></button>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12">
                     <img src="images/hero-image.png" alt="" class="img-fluid">
@@ -227,8 +227,8 @@ if (!isset($_SESSION['cart'])) {
         <div class="container">
             <div class="row text">
                 <div class="col-lg-6 col-md-12">
-                    <h3>our works</h3>
-                    <h1>Our latest project</h1>
+                    <h3>nos produits</h3>
+                    <h1>Our latest products</h1>
                     <hr>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -239,12 +239,14 @@ if (!isset($_SESSION['cart'])) {
             <div class="row project">
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
-                        <img src="images/project1.jpg" class="card-img-top" alt="...">
+                        <img src="images/pc.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
-                                <h4 class="card-title">Travel Website</h4>
-                                <p class="card-text">UI/UX Jun 29,2023</p>
-                                <button><a href="project1.html">Voir projet</a></button>
+                                <h4 class="card-title">Pc</h4>
+                                <p class="card-text"> 29,2023</p>
+                                <button><a href="project1.html">Voir prduit</a></button>
+                                 <button class="btn-like">
+      <i class="bi bi-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -252,12 +254,14 @@ if (!isset($_SESSION['cart'])) {
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
-                        <img src="images/project2.jpg" class="card-img-top" alt="...">
+                        <img src="images/pc2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
-                                <h4 class="card-title">Travel Website</h4>
-                                <p class="card-text">UI/UX Jun 29,2023</p>
-                                <button><a href="project1.html">Voir projet</a></button>
+                                <h4 class="card-title">Asus</h4>
+                                <p class="card-text">16gb 29,2023</p>
+                                <button><a href="project1.html">Voir produit</a></button>
+                                 <button class="btn-like">
+      <i class="bi bi-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -266,12 +270,14 @@ if (!isset($_SESSION['cart'])) {
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
-                        <img src="images/project3.jpg" class="card-img-top" alt="...">
+                        <img src="images/imprimante.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
-                                <h4 class="card-title">Travel Website</h4>
-                                <p class="card-text">UI/UX Aug 9,2021</p>
-                                 <button><a href="project1.html">Voir projet</a></button>
+                                <h4 class="card-title">imprimantes</h4>
+                                <p class="card-text">derniere 9,2021</p>
+                                 <button><a href="project1.html">Voir produit</a></button>
+                                  <button class="btn-like">
+      <i class="bi bi-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -279,12 +285,14 @@ if (!isset($_SESSION['cart'])) {
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card">
-                        <img src="images/project4.jpg" class="card-img-top" alt="...">
+                        <img src="images/ecran.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="text">
-                                <h4 class="card-title">SaaS Website</h4>
+                                <h4 class="card-title">ecran</h4>
                                 <p class="card-text">Development. May 25 ,2022</p>
-                                <button><a href="project1.html">Voir projet</a></button>
+                                <button><a href="project1.html">Voir produit</a></button>
+                                 <button class="btn-like">
+      <i class="bi bi-heart"></i>
 
                             </div>
                         </div>
@@ -445,6 +453,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
 });
 </script>
+<script>
+  document.querySelectorAll('.btn-like').forEach(button => {
+    button.addEventListener('click', function () {
+      const icon = this.querySelector('i');
+      this.classList.toggle('liked');
+      if (this.classList.contains('liked')) {
+        icon.classList.remove('bi-heart');
+        icon.classList.add('bi-heart-fill');
+      } else {
+        icon.classList.remove('bi-heart-fill');
+        icon.classList.add('bi-heart');
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>

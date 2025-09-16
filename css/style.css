@@ -858,3 +858,15 @@ footer p {
     /* Optionnel : pour grossir un peu l'icône */
     font-size: 1.0em;
 }
+.btn-like {
+  background: none;
+  border: none;
+  color: #fb9e01;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-like.liked {
+  color: red;
+}

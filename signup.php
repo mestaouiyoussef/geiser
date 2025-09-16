@@ -43,11 +43,6 @@
 
             $passwd = password_hash($pass, PASSWORD_DEFAULT);
 
-           
-
-
-
-
             if (mysqli_num_rows($res) > 0) {
               echo "<div class='message'>
         <p>This email is used, Try another One Please!</p>

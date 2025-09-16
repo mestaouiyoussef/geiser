@@ -223,6 +223,9 @@
                                 <h4 class="card-title">ordinateur prtable</h4>
                                 <p class="card-text">Development. Jan 19,2022</p>
                                 <button onclick="location.href='project1.html'" class="custom-button">see produit</button>
+                                <!-- Bouton Like -->
+    <button class="btn-like">
+      <i class="bi bi-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -236,6 +239,8 @@
                                 <h4 class="card-title">Accessoire</h4>
                                 <p class="card-text">UI/UX Jun 29,2023</p>
                                 <button onclick="location.href='project2.html'" class="custom-button">see produit</button>
+                                 <button class="btn-like">
+      <i class="bi bi-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -250,6 +255,8 @@
                                 <h4 class="card-title">Imprimante</h4>
                                 <p class="card-text">UI/UX Aug 9,2021</p>
                                 <button>see produit</button>
+                                 <button class="btn-like">
+      <i class="bi bi-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -263,6 +270,8 @@
                                 <h4 class="card-title">ecran</h4>
                                 <p class="card-text">Development. May 25 ,2022</p>
                                 <button>see produit</button>
+                                 <button class="btn-like">
+      <i class="bi bi-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -413,6 +422,22 @@
     });
   });
 </script>
+<script>
+  document.querySelectorAll('.btn-like').forEach(button => {
+    button.addEventListener('click', function () {
+      const icon = this.querySelector('i');
+      this.classList.toggle('liked');
+      if (this.classList.contains('liked')) {
+        icon.classList.remove('bi-heart');
+        icon.classList.add('bi-heart-fill');
+      } else {
+        icon.classList.remove('bi-heart-fill');
+        icon.classList.add('bi-heart');
+      }
+    });
+  });
+</script>
+
 
 
 </body>
